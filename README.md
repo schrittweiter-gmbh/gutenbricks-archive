@@ -1,41 +1,94 @@
-# What is this boilerplate
-This boilerplate is a fork of [WordPress Boilerplate](https://github.com/DevinVinson/WordPress-Plugin-Boilerplate) but with some additional features and improvements. It is a modern, organized, and object-oriented foundation for building high-quality WordPress plugins.
+# GutenBricks Archive
 
-## Features of this boilerplate
-- Namespaces support using composer
-- Automatic Namespace prefixing with [Strauss](https://github.com/BrianHenryIE/strauss)
-- Easy Shortcode, CLI Command Registration through the loader
-- PHPStan with ready-made Github actions
-- PHPCS with ready-made Github actions
-- [Bud.js](https://bud.js.org/) for simple bundling and build of assets
-- ESLint built in
-- Ready made Github actions, for building and bundling
+GutenBricks Archive is a WordPress plugin that enables the creation of custom archive templates using the WordPress Block Editor and seamlessly integrates them with Bricks Builder.
 
-# Setup
-## Step 1: Create Your Project
-Run the following command to create your project. This will download the boilerplate and automatically run the script for initial configuration:
+## Features
 
-```
-composer create-project juvo/wordpress-plugin-boilerplate path/to/your-new-plugin
-```
+- Custom post type for archive templates
+- Support for post type archives and taxonomy terms
+- Seamless integration with Bricks Builder
+- Fallback content option
+- Full block editor support
 
-## Step 2: Configure Your Plugin (Automatic Prompt)
-Upon project creation, you'll be guided through a series of prompts to configure your plugin:
+## Technical Details
 
-- **Plugin Name**: Enter the name of your plugin.
-- **Namespace (optional)**: Suggests a default namespace based on your plugin name but allows customization.
-- **Plugin Slug (optional)**: Choose a slug for your plugin; a default based on your plugin name is suggested.
+### Post Types
 
-Your inputs will automatically tailor the boilerplate to match your plugin's identity.
+- `gb_archive_templates`: Custom post type for storing archive templates
 
-## Step 3: Finalization (Optional)
-After configuration, the setup will finalize by updating files, renaming relevant items, and performing cleanup actions, including:
-- Replacing placeholders with your specified details.
-- Renaming files to match your plugin's namespace and slug.
-- Running `composer update` and `npm install` to install dependencies.
-- Cleaning up by removing the `setup.php` file.
+### Meta Fields
 
-At this point the plugin is set up and good to go. Now it is your time to change to adjust plugin and readme headers according to your needs.
+- `_gb_archive_type`: Stores the archive type identifier (post type or taxonomy term)
 
-### Wrapping Up
-That's it! Your plugin is now ready for development. Dive into creating your next remarkable WordPress plugin with ease and efficiency.
+### Bricks Integration
+
+The plugin adds a new Bricks element `gb-archive-block` with the following features:
+
+- Displays matching archive template content
+- Configurable fallback content
+- Automatic template selection based on current archive context
+- Support for post type archives and taxonomy terms
+
+### Supported Archive Types
+
+- Post Type Archives (for public post types with archives enabled)
+- Taxonomy Archives (categories, tags, and custom taxonomies)
+
+## Requirements
+
+- WordPress 6.0 or higher
+- PHP 8.0 or higher
+- Bricks Builder 1.5 or higher
+
+## Installation
+
+1. Upload the plugin files to `/wp-content/plugins/gutenbricks-archive`
+2. Activate the plugin through the WordPress plugins screen
+3. Create archive templates under the "Archive Templates" menu
+4. Use the "GutenBricks Archive" element in Bricks Builder
+
+## Usage
+
+1. Create a new archive template under "Archive Templates"
+2. Select the target archive type (post type or taxonomy term)
+3. Design your template using the block editor
+4. Add the "GutenBricks Archive" element to your Bricks template
+5. Configure fallback content if desired
+
+## Development
+
+The plugin follows WordPress coding standards and uses modern PHP features:
+
+- Namespaced classes
+- Type hints and return types
+- PHPStan compatibility
+- WP_Filesystem implementation
+- Object-oriented architecture
+
+## License
+
+MIT License
+
+Copyright (c) 2024 schrittweiter GmbH
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## Credits
+
+Developed by schrittweiter GmbH
