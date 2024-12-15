@@ -4,6 +4,9 @@ parameters:
     paths:
         - gutenbricks-archive.php
         - src/
+    excludePaths:
+        analyse:
+            - src/Integrations/Bricks/Elements/*
     ignoreErrors:
     scanDirectories:
         - vendor

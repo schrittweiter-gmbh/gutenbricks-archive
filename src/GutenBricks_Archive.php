@@ -121,6 +121,13 @@ class GutenBricks_Archive {
 			},
 			100
 		);
+
+		$this->loader->add_action( 'init', new \GutenBricks_Archive\Integrations\PostType\Registration(), 'register_post_type', 10 );
+
+		$this->loader->add_action( 'init', new \GutenBricks_Archive\Integrations\PostType\Meta(), 'register_meta', 10 );
+		$this->loader->add_action( 'enqueue_block_editor_assets', new \GutenBricks_Archive\Integrations\PostType\Meta(), 'enqueue_editor_assets', 10 );
+
+		$this->loader->add_action( 'init', new \GutenBricks_Archive\Integrations\Bricks\Elements(), 'load', 11 );
 	}
 
 	/**

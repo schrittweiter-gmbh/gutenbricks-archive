@@ -9,13 +9,16 @@
     "@roots/bud-sass": "^6.23.3",
     "@roots/eslint-config": "^6.23.2",
     "@wordpress/eslint-plugin": "^21",
-    "@wordpress/prettier-config": "^4.5.0"
+    "@wordpress/prettier-config": "^4.5.0",
+    "@wordpress/scripts": "^26.0.0"
   },
   "scripts": {
     "development": "npx bud build development",
     "production": "npx bud build production",
     "prettier": "npx prettier resources --check",
-    "prettier:fix": "npm run prettier -- --write"
+    "prettier:fix": "npm run prettier -- --write",
+    "build-gb-scripts": "wp-scripts build --webpack-src-dir=src-gb",
+    "start-gb-scripts": "wp-scripts start --webpack-src-dir=src-gb"
   },
   "prettier": "@wordpress/prettier-config"
 }

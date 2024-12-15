@@ -84,6 +84,7 @@ jobs:
       - if: inputs.mode == 'prod'
         run: |
           npm run production
+          npm run build-gb-scripts
           rm -rf node_modules && npm ci --omit=dev
         shell: bash
 
