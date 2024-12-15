@@ -30,7 +30,7 @@ class GutenBricks_Archive {
 
 
 	const PLUGIN_NAME    = 'gutenbricks-archive';
-	const PLUGIN_VERSION = '1.0.0';
+	const PLUGIN_VERSION = '0.0.2';
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
