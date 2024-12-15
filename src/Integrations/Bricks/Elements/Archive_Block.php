@@ -131,18 +131,18 @@ class Archive_Block extends Element {
 	 * Render fallback content.
 	 *
 	 * @param array<string, mixed> $settings Element settings.
-	 * @return string
+	 * @return void
 	 */
-	private function render_fallback( array $settings ): string {
+	private function render_fallback( array $settings ): void {
 		if ( empty( $settings['fallbackContent'] ) ) {
-			return '';
+			$content = '';
+		} else {
+			$content = $settings['fallbackContent'];
 		}
 
-		return sprintf(
-			'<div %s>%s</div>',
-			$this->render_attributes( [ '_root' => [ 'gutenbricks-archive', 'fallback' ] ] ),
-			$settings['fallbackContent']
-		);
+		echo "<div {$this->render_attributes('_root')}>";
+		echo $content;
+		echo "</div>";
 	}
 
 	/**
