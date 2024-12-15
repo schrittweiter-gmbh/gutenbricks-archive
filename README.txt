@@ -4,7 +4,7 @@ Tags: bricks-builder, gutenberg, archives, templates, blocks
 Requires at least: 6.0
 Tested up to: 6.4
 Requires PHP: 8.0
-Stable tag: 1.0.0
+Stable tag: 0.0.3
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
