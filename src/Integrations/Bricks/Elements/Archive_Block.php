@@ -79,14 +79,14 @@ class Archive_Block extends Element {
 		$this->controls['info'] = [
 			'tab'     => 'content',
 			'type'    => 'info',
-			'content' => esc_html__( 'This element will display the matching archive template content.', 'gutenbricks-archives' ),
+			'content' => esc_html__( 'This element will display the matching archive template content.', 'gutenbricks-archive' ),
 		];
 
 		$this->controls['fallbackContent'] = [
 			'tab'         => 'content',
-			'label'       => esc_html__( 'Fallback Content', 'gutenbricks-archives' ),
+			'label'       => esc_html__( 'Fallback Content', 'gutenbricks-archive' ),
 			'type'        => 'textarea',
-			'placeholder' => esc_html__( 'Content to show if no matching archive template is found', 'gutenbricks-archives' ),
+			'placeholder' => esc_html__( 'Content to show if no matching archive template is found', 'gutenbricks-archive' ),
 		];
 	}
 
