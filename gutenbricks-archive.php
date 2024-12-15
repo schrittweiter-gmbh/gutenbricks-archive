@@ -14,7 +14,7 @@
  * @wordpress-plugin
  * Plugin Name:       GutenBricks Archive
  * Description:       Adds ability to use GutenBricks also on archive and term pages
- * Version:           0.0.3
+ * Version:           0.0.4
  * Requires PHP:      8.0
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
